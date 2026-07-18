@@ -1,1 +1,1 @@
-go to the brench of master
+go to the branches of master
