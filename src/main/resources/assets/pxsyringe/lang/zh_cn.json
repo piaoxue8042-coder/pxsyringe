@@ -1,0 +1,9 @@
+{
+  "item.pxsyringe.syringe": "注射器",
+  "item.pxsyringe.potion_syringe": "药水注射器",
+  "item.pxsyringe.potion_syringe.named": "%s注射器",
+  "creativetab.pxsyringe.main": "PX 注射器",
+  "tooltip.pxsyringe.syringe.recipe": "与任意药水无序合成；来源药水不会被消耗",
+  "tooltip.pxsyringe.potion_syringe.self": "右键：给自己注射",
+  "tooltip.pxsyringe.potion_syringe.target": "Shift + 右键生物：给目标注射"
+}

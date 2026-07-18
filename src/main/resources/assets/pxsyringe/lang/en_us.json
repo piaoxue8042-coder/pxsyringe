@@ -1,0 +1,9 @@
+{
+  "item.pxsyringe.syringe": "Syringe",
+  "item.pxsyringe.potion_syringe": "Potion Syringe",
+  "item.pxsyringe.potion_syringe.named": "%s Syringe",
+  "creativetab.pxsyringe.main": "PX Syringe",
+  "tooltip.pxsyringe.syringe.recipe": "Craft with any potion; the source potion is not consumed",
+  "tooltip.pxsyringe.potion_syringe.self": "Right-click: inject yourself",
+  "tooltip.pxsyringe.potion_syringe.target": "Shift + Right-click an entity: inject the target"
+}
