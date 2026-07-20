@@ -45,7 +45,46 @@ public final class ModItems {
                                             "tooltip.pxsyringe.potion_syringe.self",
                                             "tooltip.pxsyringe.potion_syringe.target"
                                     )
+                            ),
+                    "item.pxsyringe.potion_syringe.named",
+                    true,
+                    false
+            )
+    );
+
+    public static final DeferredItem<Item> NETHERITE_SYRINGE = ITEMS.register(
+            "netherite_syringe",
+            () -> new Item(
+                    properties("netherite_syringe")
+                            .stacksTo(1)
+                            .component(
+                                    DataComponents.LORE,
+                                    lore(
+                                            "tooltip.pxsyringe.netherite_syringe.recipe",
+                                            "tooltip.pxsyringe.netherite_syringe.permanent"
+                                    )
                             )
+            )
+    );
+
+    public static final DeferredItem<PotionSyringeItem> NETHERITE_POTION_SYRINGE = ITEMS.register(
+            "netherite_potion_syringe",
+            () -> new PotionSyringeItem(
+                    properties("netherite_potion_syringe")
+                            .stacksTo(1)
+                            .component(DataComponents.POTION_CONTENTS, PotionContents.EMPTY)
+                            .component(DataComponents.POTION_DURATION_SCALE, 1.0F)
+                            .component(
+                                    DataComponents.LORE,
+                                    lore(
+                                            "tooltip.pxsyringe.potion_syringe.self",
+                                            "tooltip.pxsyringe.potion_syringe.target",
+                                            "tooltip.pxsyringe.netherite_syringe.permanent"
+                                    )
+                            ),
+                    "item.pxsyringe.netherite_potion_syringe.named",
+                    false,
+                    true
             )
     );
 

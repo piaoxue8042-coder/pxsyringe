@@ -37,7 +37,7 @@ public final class PotionSyringeRecipe extends CustomRecipe {
                 continue;
             }
 
-            if (stack.is(ModItems.SYRINGE.get()) && !foundSyringe) {
+            if (isSyringe(stack) && !foundSyringe) {
                 foundSyringe = true;
             } else if (isPotionSource(stack) && !foundPotion) {
                 foundPotion = true;
@@ -52,12 +52,15 @@ public final class PotionSyringeRecipe extends CustomRecipe {
     @Override
     public ItemStack assemble(CraftingInput input) {
         ItemStack source = findPotionSource(input);
+        ItemStack syringe = findSyringe(input);
         PotionContents contents = source.get(DataComponents.POTION_CONTENTS);
-        if (contents == null) {
+        if (contents == null || syringe.isEmpty()) {
             return ItemStack.EMPTY;
         }
 
-        ItemStack result = new ItemStack(ModItems.POTION_SYRINGE.get());
+        ItemStack result = syringe.is(ModItems.NETHERITE_SYRINGE.get())
+                ? new ItemStack(ModItems.NETHERITE_POTION_SYRINGE.get())
+                : new ItemStack(ModItems.POTION_SYRINGE.get());
         result.set(DataComponents.POTION_CONTENTS, contents);
 
         Float durationScale = source.get(DataComponents.POTION_DURATION_SCALE);
@@ -100,6 +103,19 @@ public final class PotionSyringeRecipe extends CustomRecipe {
             }
         }
         return ItemStack.EMPTY;
+    }
+
+    private static ItemStack findSyringe(CraftingInput input) {
+        for (ItemStack stack : input.items()) {
+            if (isSyringe(stack)) {
+                return stack;
+            }
+        }
+        return ItemStack.EMPTY;
+    }
+
+    private static boolean isSyringe(ItemStack stack) {
+        return stack.is(ModItems.SYRINGE.get()) || stack.is(ModItems.NETHERITE_SYRINGE.get());
     }
 
     private static boolean isPotionSource(ItemStack stack) {

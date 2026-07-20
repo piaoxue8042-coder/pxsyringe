@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "pxsyringe:netherite_potion_syringe"
+  ],
+  "result": {
+    "count": 1,
+    "id": "pxsyringe:netherite_syringe"
+  }
+}

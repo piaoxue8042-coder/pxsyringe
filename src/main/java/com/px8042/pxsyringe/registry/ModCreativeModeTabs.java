@@ -18,7 +18,10 @@ public final class ModCreativeModeTabs {
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("creativetab.pxsyringe.main"))
                     .icon(() -> new ItemStack(ModItems.SYRINGE.get()))
-                    .displayItems((parameters, output) -> output.accept(ModItems.SYRINGE.get()))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModItems.SYRINGE.get());
+                        output.accept(ModItems.NETHERITE_SYRINGE.get());
+                    })
                     .build()
     );
 

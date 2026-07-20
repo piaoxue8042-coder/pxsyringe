@@ -2,8 +2,13 @@
   "item.pxsyringe.syringe": "注射器",
   "item.pxsyringe.potion_syringe": "药水注射器",
   "item.pxsyringe.potion_syringe.named": "%s注射器",
+  "item.pxsyringe.netherite_syringe": "下界合金注射器",
+  "item.pxsyringe.netherite_potion_syringe": "下界合金药水注射器",
+  "item.pxsyringe.netherite_potion_syringe.named": "下界合金注射器（%s）",
   "creativetab.pxsyringe.main": "PX 注射器",
   "tooltip.pxsyringe.syringe.recipe": "与任意药水无序合成；来源药水不会被消耗",
   "tooltip.pxsyringe.potion_syringe.self": "右键：给自己注射",
-  "tooltip.pxsyringe.potion_syringe.target": "Shift + 右键生物：给目标注射"
+  "tooltip.pxsyringe.potion_syringe.target": "Shift + 右键生物：给目标注射",
+  "tooltip.pxsyringe.netherite_syringe.recipe": "与任意药水无序合成；来源药水不会被消耗",
+  "tooltip.pxsyringe.netherite_syringe.permanent": "永久保存装入的药水，可无限次使用；持续型效果变为无限时间"
 }
